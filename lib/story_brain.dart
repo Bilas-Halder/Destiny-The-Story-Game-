@@ -52,6 +52,13 @@ class StoryBrain {
     }
     return _storyData[_storyNumber].choice1;
   }
+  String getChoice(int choice){
+    if(_storyData.length<_storyNumber){
+      return 'Invalid Story Number.';
+    }
+    else if(choice==1)return _storyData[_storyNumber].choice1;
+    else if(choice==2)return _storyData[_storyNumber].choice2;
+  }
   String getChoice2(){
     if(_storyData.length<_storyNumber){
       return 'Invalid Story Number.';
